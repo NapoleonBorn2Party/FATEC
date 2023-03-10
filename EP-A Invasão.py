@@ -1,4 +1,4 @@
-Após uma seleção muito rigorosa, você foi escolhido como o mais capacitado para a realização de uma tarefa de essencial importância para a continuidade da espécie humana.
+"""Após uma seleção muito rigorosa, você foi escolhido como o mais capacitado para a realização de uma tarefa de essencial importância para a continuidade da espécie humana.
 CONFIDENCIAL: A Terra será invadida por extraterrestres com a intenção de total extermínio de seus habitantes para futura ocupação do planeta. Descobrir a data dessa invasão é de vital importância para impedir tamanha destruição. Informantes alienígenas aliados conseguiram obter o códifo de ataque e as regras para sua decodificação. Sua tarefa será desenvolver um programa que leia o código secreto e o decodifique, determinanndo a data da invasão.
 
 ### Mensagem dos Informantes
@@ -19,4 +19,4 @@ Descoberto o valor de sn, para determinar a data da invasão calcula-se o resto 
 2) Não use funções/métodos pré-definidos da linguagem para ordenar ou somar os itens das listas.
 3) Considere que fevereiro possui 28 dias, pois os extraterrestres não atacam em anos bissextos.
 4) Caso o procedimento resulte em um dia que excede o máximo para o mês descoberto, deve-se supor que o código foi corrompido. Uma mensagem deve indicar essa situação!
-
+"""
