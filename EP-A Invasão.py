@@ -124,8 +124,8 @@ def descobre_data(dia: int, mes: int):
         12: "dezembro"
     }
     # Conferindo a validade do mês obtido
-    if mes > 12:
-        print(f"Código corrompido! (mês= {mes})")
+    if mes > 12 or dia > 31:
+        print(f"Código corrompido! (mês= {mes}, dia={dia})")
         return
     # Conferindo a validade do dia para os mêses com < 30 dias
     elif mes % 2 == 0:
@@ -135,15 +135,11 @@ def descobre_data(dia: int, mes: int):
                 print(f"Código corrompido (mês= {mes}, dia={dia})")
                 return
         # Conferindo a validade do dia para os outros meses de 30 dias
-        if dia > 30:
+        elif dia > 30:
             print(f"Código corrompido (mês= {mes}, dia={dia})")
             return
     # Conferindo a validade da data para os outros meses:
-    elif dia > 31:
-        print(f"Código corrompido (mês= {mes}, dia={dia})")
-        return
-    else:
-        print(f"Invasão: {dia} de {meses[mes]}")
+    print(f"Invasão: {dia} de {meses[mes]}")
 
 
 def main():
@@ -159,8 +155,13 @@ def main():
     else:
         print("Método B")
         sn = metodo_b(lista_n)
+        
     dia = sn % 31
+    if dia == 0:
+        dia = 31
     mes = sn % 12
+    if mes == 0:
+        mes = 12
     descobre_data(dia, mes)
 
 
