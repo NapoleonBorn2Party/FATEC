@@ -29,3 +29,13 @@ lista_n = []
 def preenche_lista(lista, tamanho):
     for i in range(tamanho):
         lista.append(input(int("Digite um número: ")))
+
+def metodo_a(lista):
+    # Ordenando a lista crescentemente
+    for i in range(len(lista)):
+        for j in range(len(lista)):
+            if lista[i] < lista[j]:
+                aux = lista[i]
+                lista[i] = lista[j]
+                lista[j] = aux
+    
