@@ -20,12 +20,6 @@ Descoberto o valor de sn, para determinar a data da invasão calcula-se o resto 
 3) Considere que fevereiro possui 28 dias, pois os extraterrestres não atacam em anos bissextos.
 4) Caso o procedimento resulte em um dia que excede o máximo para o mês descoberto, deve-se supor que o código foi corrompido. Uma mensagem deve indicar essa situação!
 """
-
-m = input(int("m: "))
-n = input(int("n: "))
-lista_m = []
-lista_n = []
-
 def metodo_a(lista):
     # Ordenando a lista crescentemente
     for i in range(len(lista)):
