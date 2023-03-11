@@ -50,3 +50,20 @@ def metodo_a(lista):
     
     # Retorno da função
     return sn
+
+def metodo_b(lista):
+    # Somando os elementos da lista às suas posições
+    for i in range(len(lista)):
+        lista[i] = lista[i] + (i + 1)
+    
+    # Tomando os dois digitos mais a direita
+    for i in range(len(lista)):
+        lista[i] = lista[i] % 100
+    
+    # Soma total
+    sn = 0
+    for i in range(len(lista)):
+        sn = sn + lista[i]
+    
+    # Retorno da função
+    return sn
