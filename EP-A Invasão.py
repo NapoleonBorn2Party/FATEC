@@ -39,3 +39,14 @@ def metodo_a(lista):
                 lista[i] = lista[j]
                 lista[j] = aux
     
+    # Multiplicando o número por sua posição
+    for i in range(len(lista)):
+        lista[i] = lista[i] * (i + 1)
+    
+    # Soma total
+    sn = 0
+    for i in range(len(lista)):
+        sn = sn + lista[i]
+    
+    # Retorno da função
+    return sn
