@@ -89,13 +89,20 @@ def entrada_x(tam: int, lista: list, nome_lista: str):
                     ))
 
 def seleciona_metodo(lista:list):
+    # Soma dos valores da lista
     sm = 0
     for i in range(len(lista)):
         sm = sm + lista[i]
 
-    if sm % 2 == 0:
+    # Soma dos dígitos da soma
+    sd = 0
+    while sm != 0:
+        sd = sd + (sm % 10)
+        sm = sm / 10
+
+    if sd % 2 == 0:
         return 'A'
-        
+
     return 'B'
 
 
