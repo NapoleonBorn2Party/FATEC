@@ -83,3 +83,11 @@ def entrada_n():
         n = input(int("n deve estar no intervalo 0 < n < 11.\nn: "))
 
     return n
+
+def entrada_x(tam:int, lista:list, nome_lista:str):
+    for i in range(len(tam)):
+        lista[i] = input(int(f"{nome_lista}[{i}]: "))
+        while lista[i] < 0 and lista[i] > 500:
+            lista[i] = input(int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "))
+    
+    return lista
