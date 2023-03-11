@@ -67,7 +67,7 @@ def entrada_m():
     return m
 
 def entrada_n():
-    n = input(int("n: "))
+    n = int(input("n: "))
 
     while n < 0 and n > 11:
         n = int(input("n deve estar no intervalo 0 < n < 11.\nn: "))
