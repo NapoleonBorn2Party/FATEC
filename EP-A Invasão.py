@@ -82,12 +82,12 @@ def entrada_n():
 
 def entrada_x(tam:int, lista:list, nome_lista:str):
     for i in range(len(tam)):
-        lista[i] = input(int(f"{nome_lista}[{i}]: "))
+        lista.append = input(int(f"{nome_lista}[{i}]: "))
         while lista[i] < 0 and lista[i] > 500:
             lista[i] = input(int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "))
-    
-    return lista
 
 def main():
     m = entrada_m()
     n = entrada_n()
+    entrada_x(m, lista_m, 'm')
+    entrada_x(n, lista_n, 'n')
