@@ -20,6 +20,8 @@ Descoberto o valor de sn, para determinar a data da invasão calcula-se o resto 
 3) Considere que fevereiro possui 28 dias, pois os extraterrestres não atacam em anos bissextos.
 4) Caso o procedimento resulte em um dia que excede o máximo para o mês descoberto, deve-se supor que o código foi corrompido. Uma mensagem deve indicar essa situação!
 """
+
+
 def metodo_a(lista):
     # Ordenando a lista crescentemente
     for i in range(len(lista)):
@@ -28,43 +30,46 @@ def metodo_a(lista):
                 aux = lista[i]
                 lista[i] = lista[j]
                 lista[j] = aux
-    
+
     # Multiplicando o número por sua posição
     for i in range(len(lista)):
         lista[i] = lista[i] * (i + 1)
-    
+
     # Soma total
     sn = 0
     for i in range(len(lista)):
         sn = sn + lista[i]
-    
+
     # Retorno da função
     return sn
+
 
 def metodo_b(lista):
     # Somando os elementos da lista às suas posições
     for i in range(len(lista)):
         lista[i] = lista[i] + (i + 1)
-    
+
     # Tomando os dois digitos mais a direita
     for i in range(len(lista)):
         lista[i] = lista[i] % 100
-    
+
     # Soma total
     sn = 0
     for i in range(len(lista)):
         sn = sn + lista[i]
-    
+
     # Retorno da função
     return sn
+
 
 def entrada_m():
     m = int(input("m: "))
 
     while m > 6 and m < 0:
         m = int(input("m deve estar no intervalo 0 < m < 6.\nm: "))
-    
+
     return m
+
 
 def entrada_n():
     n = int(input("n: "))
@@ -74,11 +79,15 @@ def entrada_n():
 
     return n
 
-def entrada_x(tam:int, lista:list, nome_lista:str):
+
+def entrada_x(tam: int, lista: list, nome_lista: str):
     for i in range(tam):
         lista.append(int(input(f"{nome_lista}[{i}]: ")))
         while lista[i] < 0 and lista[i] > 500:
-            lista[i] = input(int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "))
+            lista[i] = input(
+                int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "
+                    ))
+
 
 def main():
     m = entrada_m()
@@ -87,6 +96,7 @@ def main():
     lista_n = []
     entrada_x(m, lista_m, 'm')
     entrada_x(n, lista_n, 'n')
+
 
 if __name__ == '__main__':
     main()
