@@ -88,7 +88,8 @@ def entrada_x(tam: int, lista: list, nome_lista: str):
                 int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "
                     ))
 
-def seleciona_metodo(lista:list):
+
+def seleciona_metodo(lista: list):
     # Soma dos valores da lista
     sm = 0
     for i in range(len(lista)):
@@ -113,7 +114,13 @@ def main():
     lista_n = []
     entrada_x(m, lista_m, 'm')
     entrada_x(n, lista_n, 'n')
-    print(seleciona_metodo(lista_m))
+    if seleciona_metodo(lista_m) == 'A':
+        print('Método A')
+        sn = metodo_a(lista_n)
+    else:
+        print("Método B")
+        sn = metodo_b(lista_n)
+
 
 if __name__ == '__main__':
     main()
