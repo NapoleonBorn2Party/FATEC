@@ -98,7 +98,7 @@ def seleciona_metodo(lista:list):
     sd = 0
     while sm != 0:
         sd = sd + (sm % 10)
-        sm = sm / 10
+        sm = sm // 10
 
     if sd % 2 == 0:
         return 'A'
@@ -113,7 +113,7 @@ def main():
     lista_n = []
     entrada_x(m, lista_m, 'm')
     entrada_x(n, lista_n, 'n')
-
+    print(seleciona_metodo(lista_m))
 
 if __name__ == '__main__':
     main()
