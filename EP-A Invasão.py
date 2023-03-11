@@ -88,6 +88,16 @@ def entrada_x(tam: int, lista: list, nome_lista: str):
                 int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "
                     ))
 
+def seleciona_metodo(lista:list):
+    sm = 0
+    for i in range(len(lista)):
+        sm = sm + lista[i]
+
+    if sm % 2 == 0:
+        return 'A'
+        
+    return 'B'
+
 
 def main():
     m = entrada_m()
