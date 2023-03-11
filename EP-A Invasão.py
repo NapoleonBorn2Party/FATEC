@@ -72,7 +72,7 @@ def entrada_m():
     m = input(int("m: "))
 
     while m > 6 and m < 0:
-        input(int("m deve estar no intervalo 0 < m < 6.\nm: "))
+        m = input(int("m deve estar no intervalo 0 < m < 6.\nm: "))
     
     return m
 
