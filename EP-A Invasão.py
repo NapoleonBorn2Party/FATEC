@@ -59,7 +59,7 @@ def metodo_b(lista):
     return sn
 
 def entrada_m():
-    m = input(int("m: "))
+    m = int(input("m: "))
 
     while m > 6 and m < 0:
         m = int(input("m deve estar no intervalo 0 < m < 6.\nm: "))
