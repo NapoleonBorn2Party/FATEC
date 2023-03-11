@@ -91,3 +91,8 @@ def entrada_x(tam:int, lista:list, nome_lista:str):
             lista[i] = input(int(f"O número deve pertencer ao intervalo 0 < x < 500\n{nome_lista}[{i}]: "))
     
     return lista
+
+def main():
+    m = entrada_m()
+    n = entrada_n()
+    
