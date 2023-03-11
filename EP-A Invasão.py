@@ -70,7 +70,7 @@ def entrada_n():
     n = input(int("n: "))
 
     while n < 0 and n > 11:
-        n = input(int("n deve estar no intervalo 0 < n < 11.\nn: "))
+        n = int(input("n deve estar no intervalo 0 < n < 11.\nn: "))
 
     return n
 
@@ -83,5 +83,10 @@ def entrada_x(tam:int, lista:list, nome_lista:str):
 def main():
     m = entrada_m()
     n = entrada_n()
+    lista_m = []
+    lista_n = []
     entrada_x(m, lista_m, 'm')
     entrada_x(n, lista_n, 'n')
+
+if __name__ == '__main__':
+    main()
