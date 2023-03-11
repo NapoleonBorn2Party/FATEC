@@ -26,10 +26,6 @@ n = input(int("n: "))
 lista_m = []
 lista_n = []
 
-def preenche_lista(lista, tamanho):
-    for i in range(tamanho):
-        lista.append(input(int("Digite um número: ")))
-
 def metodo_a(lista):
     # Ordenando a lista crescentemente
     for i in range(len(lista)):
@@ -95,4 +91,3 @@ def entrada_x(tam:int, lista:list, nome_lista:str):
 def main():
     m = entrada_m()
     n = entrada_n()
-    
