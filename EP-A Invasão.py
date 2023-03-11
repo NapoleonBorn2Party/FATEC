@@ -107,6 +107,45 @@ def seleciona_metodo(lista: list):
     return 'B'
 
 
+def descobre_data(dia: int, mes: int):
+    # Dicionário para nomes dos meses
+    meses = {
+        1: "janeiro",
+        2: "feveiro",
+        3: "março",
+        4: "abril",
+        5: "maio",
+        6: "junho",
+        7: "julho",
+        8: "agosto",
+        9: "setembro",
+        10: "outubro",
+        11: "novembro",
+        12: "dezembro"
+    }
+    # Conferindo a validade do mês obtido
+    if mes > 12:
+        print(f"Código corrompido! (mês= {mes})")
+        return
+    # Conferindo a validade do dia para os mêses com < 30 dias
+    elif mes % 2 == 0:
+        # Conferindo a validade para fevereiro
+        if mes == 2:
+            if dia > 28:
+                print(f"Código corrompido (mês= {mes}, dia={dia})")
+                return
+        # Conferindo a validade do dia para os outros meses de 30 dias
+        if dia > 30:
+            print(f"Código corrompido (mês= {mes}, dia={dia})")
+            return
+    # Conferindo a validade da data para os outros meses:
+    elif dia > 31:
+        print(f"Código corrompido (mês= {mes}, dia={dia})")
+        return
+    else:
+        print(f"Invasão: {dia} de {meses[mes]}")
+
+
 def main():
     m = entrada_m()
     n = entrada_n()
@@ -120,6 +159,9 @@ def main():
     else:
         print("Método B")
         sn = metodo_b(lista_n)
+    dia = sn % 31
+    mes = sn % 12
+    descobre_data(dia, mes)
 
 
 if __name__ == '__main__':
