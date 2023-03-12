@@ -45,18 +45,20 @@ def metodo_a(lista):
 
 
 def metodo_b(lista):
-    # Somando os elementos da lista às suas posições
+    seq = [1]
+    # Criando a sequência
+    for i in range(1, len(lista)):
+        seq.append(seq[i - 1] + i)
+    # Somando os elementos da lista à seq
     for i in range(len(lista)):
-        lista[i] = lista[i] + (i + 1)
-
+        lista[i] = lista[i] + seq[i]
     # Tomando os dois digitos mais a direita
     for i in range(len(lista)):
         lista[i] = lista[i] % 100
-
-    # Soma total
+    # Somando os digitos
     sn = 0
     for i in range(len(lista)):
-        sn = sn + lista[i]
+        sn = sn + (lista[i] // 10) + (lista[i] % 10)
 
     # Retorno da função
     return sn
