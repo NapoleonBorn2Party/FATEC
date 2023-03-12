@@ -46,18 +46,13 @@ def metodo_a(lista):
 
 def metodo_b(lista):
     seq = [1]
+    sn = 0
     # Criando a sequência
     for i in range(1, len(lista)):
         seq.append(seq[i - 1] + i)
-    # Somando os elementos da lista à seq
+    # Somando os elementos da lista à seq, tomando os dois digitos mais a direita e somando os digitos
     for i in range(len(lista)):
-        lista[i] = lista[i] + seq[i]
-    # Tomando os dois digitos mais a direita
-    for i in range(len(lista)):
-        lista[i] = lista[i] % 100
-    # Somando os digitos
-    sn = 0
-    for i in range(len(lista)):
+        lista[i] = (lista[i] + seq[i]) % 100
         sn = sn + (lista[i] // 10) + (lista[i] % 10)
 
     # Retorno da função
@@ -157,7 +152,7 @@ def main():
     else:
         print("Método B")
         sn = metodo_b(lista_n)
-        
+
     dia = sn % 31
     if dia == 0:
         dia = 31
